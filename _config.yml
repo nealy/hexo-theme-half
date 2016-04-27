@@ -1,0 +1,98 @@
+version: 1.0.0
+
+# favicon
+#favicon:
+
+# Set default keywords (Use a comma to separate)
+keywords: "Hexo, Neal"
+
+# Set rss to false to disable feed link.
+# Leave rss as empty to use site's feed link.
+# Set rss to specific value if you have burned your feed already.
+rss:
+
+# Code Highlight theme
+# Available value:
+#    normal | night | night eighties | night blue | night bright
+# https://github.com/chriskempson/tomorrow-theme
+highlight_theme: night eighties
+
+# Specify the date when the site was setup
+since: 2015
+
+# When running hexo in a subdirectory (e.g. domain.tld/blog)
+# Remove leading slashes (e.g. "/archives" -> "archives" )
+menu:
+  home: /
+  categories: /categories
+  #about: /about
+  archives: /archives
+  tags: /tags
+  #commonweal: /404.html
+
+# Enable/Disable menu icons.
+# Icon Mapping:
+#   Map a menu item to a specific FontAwesome icon name.
+#   Key is the name of menu item and value is the name of FontAwsome icon.
+#   When an question mask icon presenting up means that the item has no mapping icon.
+menu_icons:
+  enable: true
+  # Icon Mapping.
+  home: home
+  about: user
+  categories: th
+  tags: tags
+  archives: archive
+  commonweal: heartbeat
+
+# rss
+#rss:
+
+# fancybox
+fancybox: true
+
+# Google Analytics
+#google_analytics:
+
+# Baidu Analytics ID
+#baidu_analytics:
+
+# Facebook SDK Support.
+# https://github.com/iissnan/hexo-theme-next/pull/410
+facebook_sdk:
+  enable: false
+  app_id:       #<app_id>
+  fb_admin:     #<user_id>
+  like_button:  #true
+  webmaster:    #true
+
+# Duoshuo
+duoshuo:
+  enable: false
+  shortname:
+  ua_enable: true
+  admin_enable: false
+  user_id: 0
+  #admin_nickname: ROOT
+
+# Disqus
+disqus:
+  enable: false
+  shortname:
+
+# Google Webmaster tools verification setting
+# See: https://www.google.com/webmasters/
+#google_site_verification:
+
+#baidu_site_verification:
+
+#qihu_site_verification:
+
+# Use google font lato
+use_font_lato: false
+
+# jiathis
+#jiathis: true
+
+# Duoshuo share
+#duoshuo_share: true

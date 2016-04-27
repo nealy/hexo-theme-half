@@ -1,0 +1,54 @@
+<meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+{# Disable Baidu tranformation #}
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+{% if theme.google_site_verification %}
+  <meta name="google-site-verification" content="{{ theme.google_site_verification }}" />
+{% endif %}
+
+{% if theme.baidu_site_verification %}
+  <meta name="baidu-site-verification" content="{{ theme.baidu_site_verification }}" />
+{% endif %}
+
+{% if theme.qihu_site_verification %}
+  <meta name="360-site-verification" content="{{ theme.qihu_site_verification }}" />
+{% endif %}
+
+{% if theme.fancybox %}
+  <link href="/lib/fancybox/css/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css"/>
+{% endif %}
+
+{% if theme.use_font_lato %}
+  <link href="//fonts.googleapis.com/css?family=Lato:300,400,700,400italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+{% endif %}
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.5.0" rel="stylesheet" type="text/css" />
+<link href="/css/main.css?v={{ theme.version }}" rel="stylesheet" type="text/css" />
+
+{% if page.keywords %}
+  <meta name="keywords" content="{{ page.keywords }}" />
+{% elif page.tags and page.tags.length %}
+  <meta name="keywords" content="{% for tag in page.tags %}{{ tag.name }},{% endfor %}" />
+{% elif theme.keywords %}
+  <meta name="keywords" content="{{ theme.keywords }}" />
+{% endif %}
+
+{% if theme.rss === '' and config.feed and config.feed.path %}
+  {% set theme.rss = config.root + config.feed.path %}
+{% endif %}
+{% if theme.rss %}
+  <link rel="alternate" href="{{ url_for(theme.rss) }}" title="{{ config.title }}" type="application/atom+xml" />
+{% endif %}
+
+{% if theme.favicon %}
+  <link rel="shortcut icon" type="image/x-icon" href="{{ url_for(theme.favicon) }}?v={{ theme.version }}" />
+{% endif %}
+
+{% if theme.facebook_sdk.enable and theme.facebook_sdk.webmaster %}
+  <meta property="fb:admins" content="{{ theme.facebook_sdk.fb_admin }}" />
+  <meta property="fb:app_id" content="{{ theme.facebook_sdk.app_id }}" />
+{% endif %}

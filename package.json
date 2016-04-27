@@ -1,0 +1,18 @@
+{
+  "name": "hexo-theme-peanut",
+  "version": "0.1.0",
+  "private": true,
+  "devDependencies": {
+    "grunt": "~0.4.5"
+  },
+  "dependencies": {
+  	"bootstrap": "~4.0.0",
+  	"fancybox": "~2.1.5",
+  	"jquery": "~2.2.0",
+    "jquery-lazyload": "~1.9.7",
+    "tether": "~1.1.1",
+  	"font-awesome": "~4.5.0",
+    "velocity-animate": "~1.2.3",
+    "fastclick": "~1.0.6"
+  }
+}
